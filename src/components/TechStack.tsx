@@ -45,18 +45,18 @@ class CanvasErrorBoundary extends Component<
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/images/jira.png",
-  "/images/notion.png",
-  "/images/msoffice.png",
-  "/images/chatgpt.png",
-  "/images/claude.png",
-  "/images/antigravity.png",
-  "/images/gemini.png",
-  "/images/figma.png",
-  "/images/python.png",
-  "/images/mysql.webp",
-  "/images/slack.png",
-  "/images/github.png",
+  import.meta.env.BASE_URL + "images/jira.png",
+  import.meta.env.BASE_URL + "images/notion.png",
+  import.meta.env.BASE_URL + "images/msoffice.png",
+  import.meta.env.BASE_URL + "images/chatgpt.png",
+  import.meta.env.BASE_URL + "images/claude.png",
+  import.meta.env.BASE_URL + "images/antigravity.png",
+  import.meta.env.BASE_URL + "images/gemini.png",
+  import.meta.env.BASE_URL + "images/figma.png",
+  import.meta.env.BASE_URL + "images/python.png",
+  import.meta.env.BASE_URL + "images/mysql.webp",
+  import.meta.env.BASE_URL + "images/slack.png",
+  import.meta.env.BASE_URL + "images/github.png",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -240,7 +240,7 @@ const TechStack = () => {
               ))}
             </Physics>
             <Environment
-              files="/models/char_enviorment.hdr"
+              files={import.meta.env.BASE_URL + "models/char_enviorment.hdr"}
               environmentIntensity={0.5}
               environmentRotation={[0, 4, 2]}
             />
