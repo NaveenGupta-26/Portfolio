@@ -1,0 +1,333 @@
+/* ── Section ── */
+.work-section {
+    padding: 100px 0 160px 0;
+    background: var(--backgroundColor, #0a0e17);
+    position: relative;
+}
+
+/* ── Header ── */
+.work-header {
+    margin-bottom: 80px;
+}
+
+.work-header h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.work-header h2 span {
+    color: var(--accentColor, #5eead4);
+}
+
+.work-header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+}
+
+/* ── Stack container ── */
+.projects-stack {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* ── Sticky wrapper per card ── */
+.work-card-wrapper {
+    position: sticky;
+    top: 80px;
+    will-change: transform;
+    contain: layout style;
+}
+
+/* ── The visible card ── */
+.work-card {
+    width: 100%;
+    border-radius: 32px;
+    padding: 72px 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* Start visible to avoid "blank" issues if JS lags */
+    opacity: 1;
+    transform: none;
+    will-change: transform, opacity;
+    contain: content;
+    backface-visibility: hidden;
+}
+
+/* ── Two-line title ── */
+.card-titles h2 {
+    margin: 0 0 36px 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.title-primary {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.title-secondary {
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+/* ── Pills ── */
+.pill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 52px;
+}
+
+.pill-tag {
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 10px 22px;
+    border-radius: 40px;
+    font-size: 0.88rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Body row ── */
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 60px;
+}
+
+.description-wrap {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    flex: 2;
+}
+
+.desc-icon {
+    font-size: 2rem;
+    color: var(--accentColor, #5eead4);
+    line-height: 1.3;
+    flex-shrink: 0;
+}
+
+.description-wrap p {
+    font-size: 1.35rem;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 400;
+    max-width: 620px;
+    margin: 0;
+}
+
+/* ── Impact & Link ── */
+.card-impact-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.impact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.impact-box strong {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accentColor, #5eead4);
+}
+
+.impact-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.sohub-btn {
+    padding: 16px 32px;
+    background: #ffffff;
+    color: #000;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.sohub-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+    .title-primary,
+    .title-secondary {
+        font-size: 4rem;
+    }
+
+    .card-body {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .work-section {
+        padding: 80px 0;
+    }
+
+    .work-header h2 {
+        font-size: 3rem;
+    }
+
+    .title-primary,
+    .title-secondary {
+        font-size: 3rem;
+        letter-spacing: -2px;
+    }
+
+    .work-card {
+        padding: 48px 40px;
+    }
+
+    .description-wrap p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .work-section {
+        padding: 50px 0 80px 0;
+    }
+
+    .work-container.section-container {
+        width: 100%;
+        max-width: calc(100% - 32px);
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .work-header {
+        margin-bottom: 36px;
+    }
+
+    .work-header h2 {
+        font-size: 2rem;
+    }
+
+    .work-header p {
+        font-size: 0.95rem;
+    }
+
+    .projects-stack {
+        gap: 24px;
+    }
+
+    /* Disable sticky behavior on mobile — it causes overlap issues */
+    .work-card-wrapper {
+        position: relative;
+        top: auto;
+    }
+
+    .title-primary,
+    .title-secondary {
+        font-size: 1.8rem;
+        letter-spacing: -1px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .card-titles h2 {
+        margin-bottom: 16px;
+        letter-spacing: -1px;
+    }
+
+    .work-card {
+        padding: 28px 20px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .pill-tags {
+        margin-bottom: 20px;
+        gap: 6px;
+    }
+
+    .pill-tag {
+        padding: 6px 14px;
+        font-size: 0.75rem;
+    }
+
+    .description-wrap {
+        gap: 12px;
+    }
+
+    .description-wrap p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .desc-icon {
+        font-size: 1.2rem;
+    }
+
+    .card-body {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .card-impact-metrics {
+        padding-top: 0;
+        gap: 16px;
+    }
+
+    .impact-box p {
+        font-size: 0.85rem;
+    }
+
+    .sohub-btn {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .title-primary,
+    .title-secondary {
+        font-size: 1.5rem;
+    }
+
+    .work-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .work-card {
+        padding: 22px 16px;
+    }
+
+    .description-wrap p {
+        font-size: 0.82rem;
+    }
+
+    .pill-tag {
+        padding: 4px 10px;
+        font-size: 0.7rem;
+    }
+}

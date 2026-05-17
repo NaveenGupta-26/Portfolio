@@ -1,0 +1,161 @@
+.track-record-section {
+  padding: 100px 0 60px 0;
+  width: var(--cWidth);
+  margin: auto;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.track-record-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.track-record-section .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.track-record-section .section-title span {
+  color: var(--accentColor);
+}
+
+.track-record-section .section-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.7;
+  margin-bottom: 60px;
+  font-weight: 300;
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.track-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.track-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--accentColor);
+  transform: translateY(-10px);
+}
+
+.track-icon-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.track-icon {
+  font-size: 2.5rem;
+}
+
+.track-tag {
+  font-size: 1.2rem;
+  opacity: 0.3;
+}
+
+.track-content h4 {
+  font-size: 1.4rem;
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+.track-content h5 {
+  font-size: 1rem;
+  color: var(--accentColor);
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.track-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.7;
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .track-record-section {
+    padding: 50px 0 40px 0;
+    min-height: auto;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  .track-record-section .section-title {
+    font-size: 2rem;
+  }
+
+  .track-record-container {
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .track-record-section .section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+
+  .track-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .track-card {
+    padding: 28px 22px;
+  }
+
+  .track-card:hover {
+    transform: none;
+  }
+
+  .track-content h4 {
+    font-size: 1.15rem;
+  }
+
+  .track-content h5 {
+    font-size: 0.9rem;
+  }
+
+  .track-content p {
+    font-size: 0.88rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .track-record-section .section-title {
+    font-size: 1.7rem;
+  }
+
+  .track-record-section .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  .track-card {
+    padding: 22px 18px;
+  }
+
+  .track-icon {
+    font-size: 2rem;
+  }
+}
