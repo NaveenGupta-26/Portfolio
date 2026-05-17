@@ -1,176 +1,102 @@
-# 3D Portfolio Website
+# 🎨 Naveen Gupta — Professional 3D Portfolio Website
 
-This repository contains the source code for a personal 3D portfolio built with React, TypeScript, Three.js, React Three Fiber, and GSAP. It includes animated page sections, a character scene, custom cursor interactions, and smooth transitions designed for a modern portfolio experience.
+This repository contains the source code for my personal 3D portfolio website built with **React**, **TypeScript**, **Three.js (React Three Fiber)**, and **GSAP**. 
 
-Live site: [https://akashrmalhotra.netlify.app/](https://akashrmalhotra.netlify.app/)
+It features an interactive 3D character model, beautiful scroll-linked animations, standard-compliant grid layouts, smooth lenis scrolling, and a fully polished mobile-responsive experience built for modern devices.
+
+🌐 **Live Site:** [https://naveengupta-26.github.io/Portfolio/](https://naveengupta-26.github.io/Portfolio/)
 
 ![Portfolio Preview](public/images/preview1.png)
 
-## Table of Contents
+---
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Available Scripts](#available-scripts)
-- [GSAP License Note](#gsap-license-note)
-- [Customization Guide](#customization-guide)
-- [Troubleshooting](#troubleshooting)
-- [Deployment](#deployment)
-- [License](#license)
+## ✨ Features
 
-## Features
+- **3D Character Model**: Interactive character model loaded with React Three Fiber, featuring custom dynamic backlight, mouse-linked movements, and scroll triggers.
+- **GSAP Animations**: Fluid entry, exit, and scroll-linked timeline animations (ScrollTrigger) to bring each section to life.
+- **Lenis Smooth Scroll**: Unified high-performance smooth scrolling across both desktop and mobile layouts.
+- **Universal Mobile Responsiveness**: Redesigned to stack beautifully on all viewport sizes (tested on iPhone/Android) with a customized hamburger glassmorphism overlay menu.
+- **Dynamic Content Sections**:
+  - **About**: Clear overview of core mindsets with hover effects.
+  - **Experience**: Clean timeline layout showcasing operations, product leadership, and past achievements.
+  - **Work**: Distinctive interactive product showcases.
+  - **Track Record**: Highlighted stats and metrics in a single/multi-column grid.
+  - **Contact**: Fast links to GitHub, LinkedIn, and email address with word-wrap support.
+  - **Resume floating pill**: Seamless floating glassmorphic resume access in the bottom right corner.
 
-- Responsive one-page portfolio layout with reusable section components.
-- 3D character scene rendering powered by React Three Fiber and Three.js.
-- GSAP-powered animations and transitions for interactive storytelling.
-- Custom cursor, hover interactions, and scroll-driven visual effects.
-- Organized component architecture with dedicated utilities and style modules.
+---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-### Core
+- **Framework**: React 18 + TypeScript + Vite
+- **3D Renderers**: Three.js + `@react-three/fiber` + `@react-three/drei`
+- **Animations**: GSAP + `@gsap/react`
+- **Styling**: Vanilla CSS (Modular design system)
+- **Supporting**: `react-icons`, `react-fast-marquee`, `@vercel/analytics`
 
-- React 18
-- TypeScript
-- Vite
+---
 
-### Animation and 3D
-
-- GSAP + `@gsap/react`
-- Three.js
-- `@react-three/fiber`
-- `@react-three/drei`
-- `@react-three/postprocessing`
-- `@react-three/cannon`
-- `@react-three/rapier`
-
-### Supporting Libraries
-
-- `react-icons`
-- `react-fast-marquee`
-- `@vercel/analytics`
-
-## Project Structure
+## 📂 Project Structure
 
 ```text
 .
-├── public/                    # Static assets
+├── .github/workflows/         # Auto-deployment Actions (CI/CD pipeline)
+├── public/                    # Static assets (3D models, PDF resume, images)
+│   ├── images/                # Asset pictures and project screenshots
+│   └── models/                # 3D models and character assets
 ├── src/
-│   ├── assets/                # Local media/assets
-│   ├── components/
-│   │   ├── Character/         # 3D scene + character logic/utilities
-│   │   ├── styles/            # Section/component CSS files
-│   │   ├── About.tsx
-│   │   ├── Career.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Landing.tsx
-│   │   ├── MainContainer.tsx  # Main page composition
-│   │   ├── Navbar.tsx
-│   │   ├── TechStack.tsx
-│   │   ├── WhatIDo.tsx
-│   │   └── Work.tsx
-│   ├── context/               # Global providers (loading state, etc.)
-│   ├── data/                  # Static data/content definitions
-│   ├── App.tsx
-│   └── main.tsx
+│   ├── components/            # Reusable section and interactive components
+│   │   ├── Character/         # 3D character scene and decrypt utilities
+│   │   ├── styles/            # Individual component stylesheets
+│   │   └── utils/             # GSAP timeline triggers & initial effect handlers
+│   ├── context/               # Global scroll and loading providers
+│   ├── App.tsx                # Layout entrypoint
+│   └── main.tsx               # App entrypoint
 ├── package.json
 └── vite.config.ts
 ```
 
-## Getting Started
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
+- Node.js (v18+)
+- npm
 
-- Node.js 18+ (recommended)
-- npm 9+ (or compatible)
+### Local Setup
 
-### Installation
-
-1. Clone the repository:
-
+1. **Clone the repository**:
    ```bash
-   git clone <your-repository-url>
-   cd 3d-portfolio
+   git clone https://github.com/NaveenGupta-26/Portfolio.git
+   cd Portfolio
    ```
 
-2. Install dependencies:
-
+2. **Install dependencies**:
    ```bash
    npm install
    ```
 
-3. Start the local development server:
-
+3. **Start the local development server**:
    ```bash
    npm run dev
    ```
 
-4. Open the URL shown in the terminal (typically `http://localhost:5173`).
+4. Open `http://localhost:5173/` in your browser.
 
-## Available Scripts
+---
 
-- `npm run dev`  
-  Starts Vite dev server and exposes host for local network testing.
+## 📦 Deployment (CI/CD)
 
-- `npm run build`  
-  Type-checks and builds a production-ready bundle.
+The repository has been automated to deploy on **GitHub Pages** instantly using **GitHub Actions**.
 
-- `npm run preview`  
-  Serves the production build locally for verification.
+Whenever you push to the `main` branch:
+1. GitHub automatically downloads Node.js, installs dependencies, and builds the static assets.
+2. The generated production build inside `dist/` is automatically uploaded to GitHub Pages.
+3. Your live portfolio is refreshed instantly at `https://naveengupta-26.github.io/Portfolio/`.
 
-- `npm run lint`  
-  Runs ESLint checks across the project.
+---
 
-## GSAP License Note
+## 📝 License
 
-This project uses the standard `gsap` package, including bonus plugins now available in the core package.
-
-- Install dependencies with `npm install`.
-- If migrating from older setups, remove `gsap-trial` from your project.
-
-Read official installation guidance here: [GSAP Installation Docs](https://gsap.com/docs/v3/Installation/)
-
-## Customization Guide
-
-You can adapt this portfolio to your own profile by updating the following areas:
-
-- **Content sections**: Edit files in `src/components/` such as `About.tsx`, `Career.tsx`, `WhatIDo.tsx`, and `Work.tsx`.
-- **Data source**: Update static values in files under `src/data/`.
-- **Styling**: Modify component styles in `src/components/styles/` and global styles in `src/index.css` / `src/App.css`.
-- **3D scene behavior**: Adjust scene logic in `src/components/Character/` and related utilities.
-- **Animations**: Tweak GSAP utilities under `src/components/utils/`.
-
-## Troubleshooting
-
-- **Blank screen in development**  
-  Check browser console for module import errors and verify all dependencies are installed.
-
-- **3D performance issues on low-end devices**  
-  Reduce scene complexity and post-processing effects in the character/scene utilities.
-
-- **GSAP plugin errors**  
-  Ensure you have the correct plugin package and license configuration for your target environment.
-
-- **TypeScript build failures**  
-  Run `npm run build` and address reported type errors before deploying.
-
-## Deployment
-
-1. Create a production build:
-
-   ```bash
-   npm run build
-   ```
-
-2. Validate locally:
-
-   ```bash
-   npm run preview
-   ```
-
-3. Deploy the generated `dist/` folder to your hosting provider (for example Vercel, Netlify, or Cloudflare Pages).
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+This project is open-source and available under the [MIT License](LICENSE).
